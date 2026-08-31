@@ -1,40 +1,39 @@
 {
-  "schemaVersion": 1,
-  "id": "polymorph",
-  "version": "${version}",
-
-  "name": "PolyMorph",
-  "description": "One recipe, many results.",
-  "authors": [
-    "Useless"
-  ],
-  "contact": {
-    "homepage": "",
-    "sources": ""
-  },
+	"schemaVersion": 1,
+	"id": "polymorph",
+	"version": "${version}",
+	"name": "Polymorph",
+	"description": "One recipe, many results.",
+	"authors": [
+		"Useless"
+	],
+	"contributors": [
+		"sunsetsatellite"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/UselessSolutions/polymorph"
+	},
 	"icon": "icon.png",
-  "license": "CC0-1.0",
-
-  "environment": "*",
-  "entrypoints": {
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
 		"main": [
-			"useless.polymorph.PolyMorph"
+			"useless.polymorph.Polymorph"
 		],
-		"afterClientStart": [
-			"useless.polymorph.PolyMorphClient"
-		],
-		"modmenu" : [
-			"useless.polymorph.ModMenuModule"
+		"client": [
+			"useless.polymorph.PolymorphClient"
 		]
 	},
-  "mixins": [
-      "polymorph.mixins.json"
-  ],
-
-  "depends": {
-		"halplibe": ">=4.0.0",
-    "fabricloader": ">=0.13.3"
-  },
-  "suggests": {
-  }
+	"mixins": [
+		"polymorph.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=${fabricloader}",
+		"minecraft": "*",
+		"java": ">=${java}"
+	},
+	"suggests": {
+		"modmenu": ">=${modmenu}"
+	}
 }

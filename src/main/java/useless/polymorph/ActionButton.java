@@ -1,9 +1,9 @@
 package useless.polymorph;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiTexturedButton;
+import net.minecraft.client.gui.TexturedButtonElement;
 
-public class ActionButton extends GuiTexturedButton {
+public class ActionButton extends TexturedButtonElement {
 	private Runnable runnable;
 	private Runnable tickCheck;
 	public ActionButton(int id, String texturePath, int xPosition, int yPosition, int u, int v, int width, int height) {

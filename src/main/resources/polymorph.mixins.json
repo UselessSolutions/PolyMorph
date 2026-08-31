@@ -1,24 +1,18 @@
 {
   "required": true,
-  "minVersion": "0.8",
   "package": "useless.polymorph.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_${java}",
+  "injectors": {
+    "defaultRequire": 1
+  },
   "mixins": [
-    "ContainerCraftingMixin",
-    "ContainerPlayerMixin",
-    "EntityPlayerMixin",
-    "GameSettingsMixin",
+    "MenuCraftingMixin",
+    "MenuInventoryMixin",
+    "PlayerMixin",
     "RecipeRegistryMixin"
   ],
   "client": [
-    "EntityClientPlayerMPMixin",
-    "GuiInventoryMixin",
-    "GuiWorkbenchMixin"
-  ],
-  "server": [
-    "NetServerHandlerMixin"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+    "ScreenCraftingMixin",
+    "ScreenInventoryMixin"
+  ]
 }
